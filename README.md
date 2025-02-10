@@ -1,6 +1,6 @@
 # fdup
 
-The dump tool to find duplicate files by it's hash sums.
+The dumb tool to find duplicate files by it's hash sums.
 
 Compile it with `-prod` for better performance:
 

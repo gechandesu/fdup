@@ -1,6 +1,7 @@
 # Binaries for programs and plugins
 main
-fdup*
+fdup
+fdup-*
 *.exe
 *.exe~
 *.so

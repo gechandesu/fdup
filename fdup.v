@@ -35,7 +35,7 @@ fn main() {
 	mut app := cli.Command{
 		name:        'fdup'
 		description: 'File duplicates finder'
-		version:     '0.2.0'
+		version:     '0.2.1'
 		usage:       '[DIR...]'
 		execute:     find
 		defaults:    struct {

@@ -1,7 +1,7 @@
 Module {
 	name: 'fdup'
-	description: 'File duplicates finder'
-	version: '0.2.0'
+	description: 'Find and remove duplicate files'
+	version: '0.2.1'
 	license: 'GPL-3.0-or-later'
 	dependencies: []
 }

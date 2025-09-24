@@ -1,10 +1,5 @@
 # fdup
 
-> [!CAUTION]
-> Recently I've noticed wrong hashsum calculations in some cases (unknown reason for now).
->
-> Different files may be falsely marked as having the same hash! Be careful and do not use the `-remove` option until issue https://github.com/gechandesu/fdup/issues/1 is resolved.
-
 The dumb tool for finding duplicate files by their hash sums.
 
 Compile it with `-prod` for better performance:

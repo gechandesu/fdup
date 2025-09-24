@@ -286,8 +286,8 @@ enum HashFn {
 	md5
 }
 
-fn hashsum(file string, hash_fn HashFn) string {
-	file_bytes := os.read_bytes(file) or { []u8{len: 1} }
+fn hashsum(file string, hash_fn HashFn) !string {
+	file_bytes := os.read_bytes(file)!
 	defer {
 		unsafe { file_bytes.free() }
 	}
@@ -317,7 +317,10 @@ fn calculate_hashsums(tid int, files []string, hash_fn HashFn) map[string]string
 	eprintln('thread ${tid} started with queue of ${files.len} files')
 	mut sums := map[string]string{}
 	for file in files {
-		sums[file] = hashsum(file, hash_fn)
+		sums[file] = hashsum(file, hash_fn) or {
+			eprintln('File ${file} is skipped due read error: ${err}')
+			continue
+		}
 	}
 	return sums
 }
